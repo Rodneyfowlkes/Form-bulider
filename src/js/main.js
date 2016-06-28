@@ -1,31 +1,63 @@
 import $ from "jquery" 
 
- $.getJSON('http://json-data.herokuapp.com/forms').then(
-
-
-   function(x){
-
-console.log(x);
-x.forEach(n) { n.forEach(y){console.log(y)}}
-  
-  
-   if ( n.type !== "select" || n.type !== "textarea") {
-
-   var textfield = ` <div class="text_field_template">
-       <input type="text" name="" class="textfield" placeholder="${n.label}">
-
-    </div>`;
-
+ $.getJSON('http://json-data.herokuapp.com/forms').then ( function(x){
  
 
-$(".mainform_div").append(textfield);
-   }
+  x.forEach(function(y) {
+
+  
+  
+   if ( y.type === "text" || y.type === "email" || y.type === "tel")  {
+
+      var textfield = ` <div class="text_field_template">
+       <input type="text" name="" class="textfield" placeholder="${y.label}">
+
+      </div>`;
+
+      console.log(y.type);
+
+      $(".mainform_div").append(textfield);}
+
+   else if (y.type === "textarea"){
+
+    var comment_html = `<div class="text_comment_template">
+       <input type="text" name="" class="commentfield"placeholder="${y.label}">
+
+    </div>	`;
+
+    $(".mainform_div").append(comment_html);}
+
+   else if (y.type === "select"){
+   	var optionhtml;  
+
+    y.type.options.forEach(function (n){
+    	var options_temp = `<option value="${n.value}">${n.label}</option> `
+    	optionhtml += options_temp
+    })
 
 
-}
-   , function (error) {
-   	console.log(error);
-   }
+    var select_html = `<div class="text_comment_template">
+       <input type="text" name="" class="commentfield"placeholder="${y.label}">
+
+    </div>	`;
+
+    $(".mainform_div").append(comment_html);}
 
 
-	);
+
+
+
+
+   })
+ 
+
+
+
+
+
+});
+   // , function (error) {
+   // 	console.log(error);
+   // };
+
+
