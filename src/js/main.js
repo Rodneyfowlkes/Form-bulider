@@ -21,10 +21,14 @@ import $ from "jquery"
 
    else if (y.type === "textarea"){
 
-    var comment_html = `<div class="text_comment_template">
-       <input type="text" name="" class="commentfield"placeholder="${y.label}">
-
-    </div>	`;
+    var comment_html = `
+     <form class="forms">
+         <div class="text_comment_template">
+           <i class="fa ${y.icon}"></i>
+           <input type="text" name="" class="commentfield"placeholder="${y.label}">
+          
+         </div> 
+     </form>	`;
 
     $(".mainform_div").append(comment_html);}
 
@@ -39,7 +43,7 @@ import $ from "jquery"
   })
 
 
-    var select_html = `<select class="text_comment_template">
+    var select_html = `<select class="select_template">
      
      <option value="select">Select language...</option>
      ${optionhtml}
