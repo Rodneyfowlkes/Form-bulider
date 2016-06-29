@@ -1,0 +1,101 @@
+.main_container {
+	position: relative;
+	width: 500px;
+	margin: auto;
+
+	border: 2px solid #AFB3B7;
+	border-radius: 3px;
+
+
+}
+
+.header{
+	background-color: #428BCA;
+	color: white;
+	text-align: center;
+	height: 70px;
+	margin-bottom: 10%;
+
+}
+
+.footer {
+
+	width: 500px;
+	bottom: 0%;
+	height: 70px;
+	background-color: #C9DEF0;
+}
+
+.submit_button {
+   background-color: #428BCA;
+   color: white;
+   border-style: none;	
+   border-radius: 2px;
+   height: 34px; 
+   margin-left: 3%;
+   margin-top: 5%;
+}
+
+.text_field_template{
+width: 80%;
+margin:auto;
+margin-bottom: 4%;
+border: 1px solid grey;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.textfield {
+	width: 100%;
+	border-style: none;
+}
+
+.text_comment_template {
+width: 80%;
+margin:auto;
+margin-bottom: 4%;
+height: 80px;
+border: 1px solid grey;
+
+
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  -webkit-justify-content: center;
+          justify-content: center;
+
+}
+
+.select_template {
+width: 80%;
+margin:auto;
+margin-bottom: 4%;
+
+
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+
+}
+
+
+
+.commentfield{
+	border-style: none;
+	width: 100%;
+	
+
+}
+
+.forms{border: 4px solid black;}
+
+
+
